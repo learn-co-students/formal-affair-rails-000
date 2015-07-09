@@ -4,7 +4,7 @@ class CreateBabies < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.integer :weight
-      t.datetime :birth_date
+      t.date :birth_date
     end
   end
 end
