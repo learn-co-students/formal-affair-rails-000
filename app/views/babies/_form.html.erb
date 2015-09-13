@@ -1,1 +1,15 @@
 <!-- Your form goes here! -->
+<%= form_for @baby do |f| %>
+  <%= f.label :first_name %><br>
+  <%= f.text_field :first_name, :value => "#{@baby.first_name}"  %><br>
+  <%= f.label :last_name %><br>
+  <%= f.text_field :last_name, :value => "#{@baby.last_name}"  %><br>
+  <%= f.label :weight %><br>
+  <%= f.number_field :weight, :value => "#{@baby.weight}"  %><br>
+  <%= f.label :birth_date %><br>
+  <%= f.text_field :birth_date, :value => "#{@baby.birth_date}" %><br>
+  
+ <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

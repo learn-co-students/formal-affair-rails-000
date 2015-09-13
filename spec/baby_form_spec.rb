@@ -32,7 +32,7 @@ feature 'baby form' do
         'authenticity_token' => 'test token'
       }
 
-      expect(expected_params).to eq test_params
+      expect(expected_params).to eq (test_params)
     end
   end
 
@@ -65,7 +65,7 @@ feature 'baby form' do
         'authenticity_token' => 'test token'
       }
 
-      expect(expected_params).to eq test_params
+      expect(expected_params).to eq(test_params)
     end
   end
 end
