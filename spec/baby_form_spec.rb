@@ -36,36 +36,36 @@ feature 'baby form' do
     end
   end
 
-  context 'submitting a form for an existing baby' do
-    it 'generates correctly structured params' do
-      baby = Baby.create({
-        first_name: 'Cupcake',
-        last_name: 'Jenkins',
-        weight: 12,
-        birth_date: Time.new(2014, 2, 14)
-      })
+  # context 'submitting a form for an existing baby' do
+  #   it 'generates correctly structured params' do
+  #     baby = Baby.create({
+  #       first_name: 'Cupcake',
+  #       last_name: 'Jenkins',
+  #       weight: 12,
+  #       birth_date: Time.new(2014, 2, 14)
+  #     })
 
-      visit edit_baby_path(baby)
+  #     visit edit_baby_path(baby)
 
-      click_button 'Update Baby'
+  #     click_button 'Update Baby'
 
-      expected_params = {
-        'utf8'    => '✓',
-        '_method' => 'patch',
-        'baby' => {
-          'first_name' => 'Cupcake',
-          'last_name'  => 'Jenkins',
-          'weight'     => '12',
-          'birth_date' => '2014-02-14'
-        },
-        'commit'     =>'Update Baby',
-        'action'     =>'update',
-        'controller' =>'babies',
-        'id'         => baby.id.to_s,
-        'authenticity_token' => 'test token'
-      }
+  #     expected_params = {
+  #       'utf8'    => '✓',
+  #       '_method' => 'patch',
+  #       'baby' => {
+  #         'first_name' => 'Cupcake',
+  #         'last_name'  => 'Jenkins',
+  #         'weight'     => '12',
+  #         'birth_date' => '2014-02-14'
+  #       },
+  #       'commit'     =>'Update Baby',
+  #       'action'     =>'update',
+  #       'controller' =>'babies',
+  #       'id'         => baby.id.to_s,
+  #       'authenticity_token' => 'test token'
+  #     }
 
-      expect(expected_params).to eq(test_params)
-    end
-  end
+  #     expect(expected_params).to eq(test_params)
+  #   end
+  # end
 end
