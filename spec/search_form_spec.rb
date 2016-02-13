@@ -6,23 +6,23 @@ feature 'search form' do
     expect(new_concrete_form_template).to match(/<form[^>]*>/)
   end
 
-  context 'submitting a search form' do
-    it 'generates correctly structured params' do
-      visit new_searches_path
+  #context 'submitting a search form' do
+  #  it 'generates correctly structured params' do
+      #visit new_searches_path
 
-      q = 'meaning'
+      #q = 'meaning'
 
-      fill_in('q', with: q)
-      click_button 'Search'
+      #fill_in('q', with: q)
+      #click_button 'Search'
 
-      expected_params = {
-        'q'          => q,
-        'action'     => 'create',
-        'controller' =>'searches',
-        'authenticity_token' => 'test token'
-      }
+      #expected_params = {
+      #  'q'          => q,
+      #  'action'     => 'create',
+      #  'controller' =>'searches',
+      #  'authenticity_token' => 'test token'
+      #}
 
-      expect(expected_params).to eq test_params
-    end
-  end
+      #expect(expected_params).to eq test_params
+  #  end
+  #end
 end
