@@ -1,0 +1,14 @@
+
+
+<p>
+  <h3>Name:</h3>
+  <%= @baby.first_name %>
+  <%= @baby.last_name%>
+
+  <h3>Content:</h3>
+
+</p>
+
+
+<%= link_to 'Update Baby', edit_baby_path(@baby) %> |
+<%= link_to 'New', new_baby_path %>

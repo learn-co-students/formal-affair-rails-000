@@ -17,7 +17,7 @@ feature 'baby form' do
       fill_in('baby[birth_date]', with: '2014-02-12 05:00:00.000000')
 
       click_button 'Create Baby'
-
+      
       expected_params = {
         'utf8' => '✓',
         'baby' => {
