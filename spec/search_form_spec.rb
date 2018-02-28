@@ -8,7 +8,7 @@ feature 'search form' do
 
   context 'submitting a search form' do
     it 'generates correctly structured params' do
-      visit new_searches_path
+      visit new_search_path
 
       q = 'meaning'
 
@@ -22,7 +22,7 @@ feature 'search form' do
         'authenticity_token' => 'test token'
       }
 
-      expect(expected_params).to eq test_params
+      expect(test_params).to eq expected_params
     end
   end
 end
